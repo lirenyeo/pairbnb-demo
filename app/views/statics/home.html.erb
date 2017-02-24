@@ -1,0 +1,31 @@
+<h1> Welcome to AirBnB Clone </h1>
+<h6 style="color:#B2B4B4;"> Please don't sue me </h6>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <p> Feel in the form to create new listing! </p>
+      <%= render 'listings/form', listing: Listing.new %>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+      <% Listing.all.each do |l| %>
+            <tr>
+              <td><%= l.name %></td>
+              <td><%= l.location %></td>
+              <td><%= l.price %></td>
+            </tr>
+      <% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
