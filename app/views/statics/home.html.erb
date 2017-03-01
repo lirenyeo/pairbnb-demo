@@ -19,7 +19,7 @@
           <tbody>
       <% Listing.all.each do |l| %>
             <tr>
-              <td><%= l.name %></td>
+              <td><%= link_to l.name, listing_path(l) %></td>
               <td><%= l.location %></td>
               <td><%= l.price %></td>
             </tr>
