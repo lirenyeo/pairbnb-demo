@@ -1,0 +1,8 @@
+<div class="form-container">
+  <%= form_tag('/spam') do %>
+    <div class="form-group">
+      <%= text_field_tag 'email' %>
+    </div>
+    <%= submit_tag 'Spam!' %>
+  <% end %>
+</div>

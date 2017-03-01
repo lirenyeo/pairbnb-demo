@@ -6,26 +6,30 @@
     <div class="col-md-6">
       <p> Feel in the form to create new listing! </p>
       <%= render 'listings/form', listing: Listing.new %>
+      <div style="border:solid 1px #C8C8C8; padding:12px; width:300px;">
+      <p> Feel free to spam someone an email! </p>
+      <%= render 'spam' %>
+      </div>
     </div>
     <div class="col-md-6">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Location</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-      <% Listing.all.each do |l| %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Listing.all.each do |l| %>
             <tr>
               <td><%= l.name %></td>
               <td><%= l.location %></td>
               <td><%= l.price %></td>
             </tr>
-      <% end %>
-          </tbody>
-        </table>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
